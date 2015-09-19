@@ -1,0 +1,93 @@
+<ion-view view-title="CalculaDos">
+  <ion-content >
+
+<div class="list ">
+
+    <div class="calcbody">
+
+      <!-- Calculator Display -->
+      <div class="thinborder" >
+
+        <!-- Display is bound to scope variables in app.js -->
+        <p class="output" name="output" >
+          {{output}}<br>
+          {{operationToken}}
+        </p>
+
+      </div>
+
+      <div class="calcbuttons">
+
+        <!-- Buttons all have ng-click directives that call functions in app.js -->
+        <div class="row">
+          <div class="col col-25">
+            <button name="btn1" class="button button-calm " value="1" ng-click='updateOutput(1)'>&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+          <div class="col col-25">
+            <button name="btn2" class="button button-calm" value="2" ng-click='updateOutput(2)'>&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+          <div class="col col-25">
+            <button name="btn3" class="button button-calm" value="3" ng-click='updateOutput(3)'>&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+          <div class="col col-25">
+            <button name="btnMinus" class="button button-assertive" ng-click='subtract()'> &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-25">
+            <button name="btn4" class="button button-calm" value="4" ng-click='updateOutput(4)'>&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+          <div class="col col-25">
+            <button name="btn5" class="button button-calm" value="5" ng-click='updateOutput(5)'>&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+          <div class="col col-25">
+            <button name="btn6" class="button button-calm" value="6" ng-click='updateOutput(6)'>&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+          <div class="col col-25">
+            <button name="btnPlus" class="button button-positive" ng-click='add()'>&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+        </div>
+
+        <div class="row ">
+          <div class="col col-25">
+            <button name="btn7" class="button button-calm" value="7" ng-click='updateOutput(7)'>&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+          <div class="col col-25">
+            <button name="btn8" class="button button-calm" value="8" ng-click='updateOutput(8)'>&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+          <div class="col col-25">
+            <button name="btn9" class="button button-calm" value="9" ng-click='updateOutput(9)'>&nbsp;&nbsp;&nbsp;9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+          <div class="col col-25">
+            <button name="btnEquals" class="button button-royal" ng-click='calculate()'>&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+      </div>
+
+        <div class="row">
+          <div class="col ">
+            <button name="btn0" class="button button-block button-calm" value="0" ng-click='updateOutput(0)'>&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+          <div class="col col-50">
+            <button name="btnClear" class="button button-balanced button-block" ng-click='clear()'>&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- Scoped variables displayed for debugging
+    <p>
+      pendingOperation: {{pendingOperation}}<br>
+      lastOperation: {{lastOperation}}<br>
+      runningTotal: {{runningTotal}}<br>
+      pendingValue: {{pendingValue}}<br>
+      newNumber: {{newNumber}}
+    </p>-->
+
+  </div>
+ </ion-content>
+</ion-view>
